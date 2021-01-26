@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float playerHealth = 100;
+
     float xMoveInput;
     public float playermoveSpeed = 10;
     public float jumpstrength = 10;
-
-    public bool isMoving = false;
 
     public bool isGrounded;
     public float checkRadius;
@@ -17,19 +17,38 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
 
-    // Start is called before the first frame update
+    public GameObject bulletPrefab;
+    public GameObject firepoint;
+
+    public static Player instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpstrength;
+        }
+        if(Input.GetMouseButtonDown(0))
+        {
+            Shoot();
         }
 
     }
@@ -40,5 +59,12 @@ public class Player : MonoBehaviour
 
         xMoveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(xMoveInput * playermoveSpeed, rb.velocity.y);
+    }
+
+    void Shoot()
+    {
+        GameObject spell = Instantiate(bulletPrefab, firepoint.transform.position, Quaternion.identity);
+        Rigidbody2D spellrb = spell.GetComponent<Rigidbody2D>();
+        spellrb.AddForce(Vector2.right * playermoveSpeed, ForceMode2D.Impulse);
     }
 }

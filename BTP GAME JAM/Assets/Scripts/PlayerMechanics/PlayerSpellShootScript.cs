@@ -1,0 +1,44 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerSpellShootScript : MonoBehaviour
+{
+    public float speed = 0.1f;
+
+    Vector3 moveDirection;
+
+    TimeManager timeManager;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        CalculateDirectiontoMouse();
+        timeManager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.up = moveDirection;
+        transform.position = transform.position + moveDirection * speed * Time.deltaTime;
+        Destroy(gameObject, 2f);
+    }
+
+    public void CalculateDirectiontoMouse()
+    {
+        moveDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+        moveDirection.z = 0;
+        moveDirection.Normalize();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            timeManager.SlowMotion();
+            Destroy(gameObject);
+        }
+    }
+}
