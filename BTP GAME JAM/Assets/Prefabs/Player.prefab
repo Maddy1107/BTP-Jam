@@ -279,7 +279,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9921ec2e0a88fa46bdefbea189b643a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   bounceforce: 15
   givenDamage: 1
-  timeManager: {fileID: 0}

@@ -12,20 +12,6 @@ public class BlobScript : MonoBehaviour
 
     public bool ShieldOn = true;
 
-    public static BlobScript instance;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     void Update()
     {
         if(gameObject.transform.childCount == 2)

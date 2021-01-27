@@ -10,6 +10,9 @@ TagManager:
   - TimeManager
   - Blob
   - BlobShield
+  - FlyingEnemyShield
+  - Tile
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX

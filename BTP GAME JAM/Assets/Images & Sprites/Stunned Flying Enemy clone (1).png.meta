@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: 0a0863b8b9f4331408deede89997dfce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1252168959064099391
+    second: Stunned Flying Enemy clone (1)_0
+  - first:
+      213: -8141827766580294236
+    second: Stunned Flying Enemy clone (1)_1
+  - first:
+      213: 2718718028078143329
+    second: Stunned Flying Enemy clone (1)_2
+  - first:
+      213: 3079346248356696556
+    second: Stunned Flying Enemy clone (1)_3
+  - first:
+      213: 8781367322943774341
+    second: Stunned Flying Enemy clone (1)_4
+  - first:
+      213: -2574176954066011436
+    second: Stunned Flying Enemy clone (1)_5
+  - first:
+      213: -9137333482007412779
+    second: Stunned Flying Enemy clone (1)_6
+  - first:
+      213: -1501098268863500820
+    second: Stunned Flying Enemy clone (1)_7
+  - first:
+      213: 2068797934995899021
+    second: Stunned Flying Enemy clone (1)_8
+  - first:
+      213: 2168850218988466523
+    second: Stunned Flying Enemy clone (1)_9
+  - first:
+      213: 713813853131682312
+    second: Stunned Flying Enemy clone (1)_10
+  - first:
+      213: 2502413833201088076
+    second: Stunned Flying Enemy clone (1)_11
+  - first:
+      213: -7823206957489013115
+    second: Stunned Flying Enemy clone (1)_12
+  - first:
+      213: 4388836810494659926
+    second: Stunned Flying Enemy clone (1)_13
+  - first:
+      213: -3631261607414754260
+    second: Stunned Flying Enemy clone (1)_14
+  - first:
+      213: -1164130831569347053
+    second: Stunned Flying Enemy clone (1)_15
+  - first:
+      213: -4671769817344679050
+    second: Stunned Flying Enemy clone (1)_16
+  - first:
+      213: 8548242168668177615
+    second: Stunned Flying Enemy clone (1)_17
+  - first:
+      213: -7781704523195090662
+    second: Stunned Flying Enemy clone (1)_18
+  - first:
+      213: 6421840817949555937
+    second: Stunned Flying Enemy clone (1)_19
+  - first:
+      213: 2426151159633257345
+    second: Stunned Flying Enemy clone (1)_20
+  - first:
+      213: -4968734403573926732
+    second: Stunned Flying Enemy clone (1)_21
+  - first:
+      213: 1648133294328466796
+    second: Stunned Flying Enemy clone (1)_22
+  - first:
+      213: 7648569147691962254
+    second: Stunned Flying Enemy clone (1)_23
+  - first:
+      213: 7936318313173902675
+    second: Stunned Flying Enemy clone (1)_24
+  - first:
+      213: -3472005596315001668
+    second: Stunned Flying Enemy clone (1)_25
+  - first:
+      213: 4840997587246088395
+    second: Stunned Flying Enemy clone (1)_26
+  - first:
+      213: 482012826366268995
+    second: Stunned Flying Enemy clone (1)_27
+  - first:
+      213: -4282924706989101042
+    second: Stunned Flying Enemy clone (1)_28
+  - first:
+      213: -6882691620115952635
+    second: Stunned Flying Enemy clone (1)_29
+  - first:
+      213: -7054376739947969026
+    second: Stunned Flying Enemy clone (1)_30
+  - first:
+      213: -6671477890359193245
+    second: Stunned Flying Enemy clone (1)_31
+  - first:
+      213: -741819195020109626
+    second: Stunned Flying Enemy clone (1)_32
+  - first:
+      213: 3846963468004793473
+    second: Stunned Flying Enemy clone (1)_33
+  - first:
+      213: -1336409198808031825
+    second: Stunned Flying Enemy clone (1)_34
+  - first:
+      213: 3047657668736998947
+    second: Stunned Flying Enemy clone (1)_35
+  - first:
+      213: 1261507273888190470
+    second: Stunned Flying Enemy clone (1)_36
+  - first:
+      213: 71187902099927768
+    second: Stunned Flying Enemy clone (1)_37
+  - first:
+      213: -8306036628134864492
+    second: Stunned Flying Enemy clone (1)_38
+  - first:
+      213: -4878548002725641466
+    second: Stunned Flying Enemy clone (1)_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stunned Flying Enemy clone (1)_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 165
+        width: 130
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eb086a8b26e6390800000000000000
+      internalID: -7823206957489013115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stunned Flying Enemy clone (1)_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 165
+        width: 129
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24978baeca2b9dc0800000000000000
+      internalID: -3631261607414754260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stunned Flying Enemy clone (1)_27
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 5
+        width: 129
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3465ebc9c1470b600800000000000000
+      internalID: 482012826366268995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stunned Flying Enemy clone (1)_29
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5
+        width: 130
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c4e640074cb70a0800000000000000
+      internalID: -6882691620115952635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

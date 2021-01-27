@@ -10,6 +10,8 @@ public class PlayerSpellShootScript : MonoBehaviour
 
     TimeManager timeManager;
 
+    public ParticleSystem enemyHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,17 @@ public class PlayerSpellShootScript : MonoBehaviour
             if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
             {
                 Destroy(collision.gameObject);
+            }
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "FlyingEnemyShield")
+        {
+            ParticleSystem enemyHitPrefab = Instantiate(enemyHit, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(enemyHitPrefab, 1);
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
+            {
+                //Destroy(collision.gameObject, 1);
             }
             Destroy(gameObject);
         }

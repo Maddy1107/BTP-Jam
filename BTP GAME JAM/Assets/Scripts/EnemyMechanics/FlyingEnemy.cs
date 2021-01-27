@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour
 {
@@ -9,9 +8,33 @@ public class FlyingEnemy : MonoBehaviour
     public float enemyFirerate = 4f;
     float NextFire;
 
-    Animator animator;
-
     public GameObject blades;
+
+    public bool ShieldOn = true;
+    public GameObject shield;
+
+    public float shieldcooldowntime = 5f;
+
+    public float nextshieldspawn;
+
+    public bool isCooldown = true;
+
+    public static FlyingEnemy instance;
+
+    EnemyWaveSpawner enemySpawner;
+    private float nextpositionChangetime;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -19,14 +42,39 @@ public class FlyingEnemy : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         }
-        animator = GetComponent<Animator>();
+        enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemyWaveSpawner>();
+        nextshieldspawn = shieldcooldowntime;
     }
 
     void Update()
     {
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
-            EnemyMove();
+            if (ShieldOn == true)
+            {
+                /*if (nextpositionChangetime < Time.time)
+                {
+                    Transform randomspawnPoint = enemySpawner.FlyingEnemyspawnpoints[Random.Range(0, enemySpawner.FlyingEnemyspawnpoints.Length)];
+                    transform.position = randomspawnPoint.position;
+                    nextpositionChangetime = Time.time + 2;
+                }*/
+                EnemyMove();
+            }
+            else
+            {
+                if (nextshieldspawn <= 0)
+                {
+                    ShieldOn = true;
+                    nextshieldspawn = 0;
+                    shield.gameObject.SetActive(true);
+                    shield.GetComponent<EnemyHealth>().setHP(10);
+                    shield.GetComponent<EnemyHealth>().animator.SetBool("ShieldDestroyed", false);
+                }
+                else
+                {
+                    nextshieldspawn -= Time.deltaTime;
+                }
+            }
         }
             
     }

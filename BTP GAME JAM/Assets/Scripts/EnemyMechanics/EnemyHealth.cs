@@ -30,7 +30,12 @@ public class EnemyHealth : MonoBehaviour
             else if (gameObject.tag == "BlobShield")
             {
                 Destroy(gameObject);
-                BlobScript.instance.ShieldOn = false;
+            }
+            else if(gameObject.tag == "FlyingEnemyShield")
+            {
+                gameObject.SetActive(false);
+                animator.SetBool("ShieldDestroyed", true);
+                FlyingEnemy.instance.ShieldOn = false;
             }
         }
     }
@@ -43,5 +48,10 @@ public class EnemyHealth : MonoBehaviour
     public float getHP()
     {
         return currentHP;
+    }
+
+    public void setHP(float HP)
+    {
+        currentHP = HP;
     }
 }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlyingEnemy
+  m_Name: FlyingEnemyStunned
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,16 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3840582967287062757, guid: 90d2a3442f0dc7347916f8c3558fc8ae,
+      value: {fileID: -7823206957489013115, guid: 0a0863b8b9f4331408deede89997dfce,
         type: 3}
     - time: 0.2
-      value: {fileID: -3144876562351021627, guid: 90d2a3442f0dc7347916f8c3558fc8ae,
+      value: {fileID: -3631261607414754260, guid: 0a0863b8b9f4331408deede89997dfce,
         type: 3}
     - time: 0.4
-      value: {fileID: 1296025063055401198, guid: 90d2a3442f0dc7347916f8c3558fc8ae,
+      value: {fileID: 482012826366268995, guid: 0a0863b8b9f4331408deede89997dfce,
         type: 3}
     - time: 0.6
-      value: {fileID: -7280600075353750607, guid: 90d2a3442f0dc7347916f8c3558fc8ae,
+      value: {fileID: -6882691620115952635, guid: 0a0863b8b9f4331408deede89997dfce,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -50,10 +50,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3840582967287062757, guid: 90d2a3442f0dc7347916f8c3558fc8ae, type: 3}
-    - {fileID: -3144876562351021627, guid: 90d2a3442f0dc7347916f8c3558fc8ae, type: 3}
-    - {fileID: 1296025063055401198, guid: 90d2a3442f0dc7347916f8c3558fc8ae, type: 3}
-    - {fileID: -7280600075353750607, guid: 90d2a3442f0dc7347916f8c3558fc8ae, type: 3}
+    - {fileID: -7823206957489013115, guid: 0a0863b8b9f4331408deede89997dfce, type: 3}
+    - {fileID: -3631261607414754260, guid: 0a0863b8b9f4331408deede89997dfce, type: 3}
+    - {fileID: 482012826366268995, guid: 0a0863b8b9f4331408deede89997dfce, type: 3}
+    - {fileID: -6882691620115952635, guid: 0a0863b8b9f4331408deede89997dfce, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
