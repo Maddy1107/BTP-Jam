@@ -37,7 +37,19 @@ public class PlayerSpellShootScript : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
-            timeManager.SlowMotion();
+            if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
+            {
+                timeManager.SlowMotion();
+            }
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "BlobShield")
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
+            {
+                Destroy(collision.gameObject);
+            }
             Destroy(gameObject);
         }
     }

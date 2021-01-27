@@ -103,8 +103,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 581681247
-  m_SortingLayer: 3
+  m_SortingLayerID: -1937316095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 3840582967287062757, guid: 90d2a3442f0dc7347916f8c3558fc8ae,
     type: 3}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6162657177971891478}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96e57a41f0a912044992a80b88817810, type: 3}
   m_Name: 
@@ -152,6 +152,7 @@ MonoBehaviour:
   EnemyFirepoint: {fileID: 2981565336539697079}
   enemyspeed: 5
   enemyFirerate: 4
+  blades: {fileID: 4058495034860573319, guid: cd17ea32aed010e408affa2f004269e0, type: 3}
 --- !u!50 &-994210013391544416
 Rigidbody2D:
   serializedVersion: 4
@@ -235,5 +236,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43fd989068caea4799eda19bc9c95e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 5
-  enemyanimator: {fileID: 3725933754249229242}
+  enemyHP: 1
+  animator: {fileID: 3725933754249229242}

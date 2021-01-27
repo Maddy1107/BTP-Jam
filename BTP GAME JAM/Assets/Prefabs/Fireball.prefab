@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 581681247
-  m_SortingLayer: 3
+  m_SortingLayerID: -1937316095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -6607481912129624618, guid: 89facc6af6324864db2279cda4809994,
     type: 3}
@@ -103,7 +103,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.13333334, y: 0.19333333}
+    oldSize: {x: 0.11333334, y: 0.18}
     newSize: {x: 2, y: 2.9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -337,8 +337,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 581681247
-  m_SortingLayer: 3
+  m_SortingLayerID: -1937316095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Time: 0.1
   m_Parameters:

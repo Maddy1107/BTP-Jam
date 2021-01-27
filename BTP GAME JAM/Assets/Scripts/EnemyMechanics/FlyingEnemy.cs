@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class FlyingEnemy : MonoBehaviour
     float NextFire;
 
     Animator animator;
+
+    public GameObject blades;
 
     private void Start()
     {
@@ -23,40 +26,53 @@ public class FlyingEnemy : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
+            EnemyMove();
+        }
+            
+    }
 
-            if (Vector2.Distance(transform.position, player.position) > 1)
+    private void EnemyMove()
+    {
+        if (Vector2.Distance(transform.position, player.position) > 5)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, enemyspeed * Time.deltaTime);
+        }
+        else
+        {
+            if (NextFire < Time.time)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, enemyspeed * Time.deltaTime);
+                EnemyShoot();
+                NextFire = Time.time + enemyFirerate;
             }
+        }
+        float avoidSpeed = enemyspeed / 2f;
+        float avoidRadius = 1f;
 
-            /*float avoidSpeed = enemyspeed / 2f;
-            float avoidRadius = 1f;
-
-            Vector2 avoidDir = Vector2.zero;
-            float count = 0f;
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, avoidRadius);
-            foreach (var hit in hits)
+        Vector2 avoidDir = Vector2.zero;
+        float count = 0f;
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, avoidRadius);
+        foreach (var hit in hits)
+        {
+            if (hit.GetComponent<FlyingEnemy>() != null && hit.transform != transform)
             {
-                if (hit.GetComponent<Enemy>() != null && hit.transform != transform)
-                {
-                    Vector2 difference = transform.position - hit.transform.position;
-                    difference = difference.normalized / Mathf.Abs(difference.magnitude);
+                Vector2 difference = transform.position - hit.transform.position;
+                difference = difference.normalized / Mathf.Abs(difference.magnitude);
 
-                    avoidDir += difference;
-                    count++;
-                }
+                avoidDir += difference;
+                count++;
             }
+        }
 
-            if (count > 0)
-            {
-                avoidDir /= count;
-                avoidDir = avoidDir.normalized * avoidSpeed;
-                transform.position = Vector2.MoveTowards(transform.position, transform.position + (Vector3)avoidDir, avoidSpeed * Time.deltaTime);
-            }*/
+        if (count > 0)
+        {
+            avoidDir /= count;
+            avoidDir = avoidDir.normalized * avoidSpeed;
+            transform.position = Vector2.MoveTowards(transform.position, transform.position + (Vector3)avoidDir, avoidSpeed * Time.deltaTime);
         }
     }
 
-    private void OnDestroy()
+    private void EnemyShoot()
     {
+        Instantiate(blades, EnemyFirepoint.transform.position, Quaternion.identity);
     }
 }

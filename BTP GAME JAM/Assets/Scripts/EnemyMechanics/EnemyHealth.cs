@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float enemyHP;
-    float currentHP;
+    public float currentHP;
 
     public Animator animator;
 
@@ -18,14 +18,30 @@ public class EnemyHealth : MonoBehaviour
     {
         if(currentHP <= 0)
         {
-            //Destroy(transform.parent.gameObject, 0.5f);
-            animator.SetBool("Destroyed", true);
-            Destroy(gameObject,1);
+            if (gameObject.tag == "Enemy")
+            {
+                animator.SetBool("Destroyed", true);
+                Destroy(gameObject, 1);
+            }
+            else if(gameObject.tag == "CrushHurter")
+            {
+                Destroy(transform.parent.gameObject);
+            }
+            else if (gameObject.tag == "BlobShield")
+            {
+                Destroy(gameObject);
+                BlobScript.instance.ShieldOn = false;
+            }
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
+    }
+
+    public float getHP()
+    {
+        return currentHP;
     }
 }

@@ -9,30 +9,50 @@ public class BlobScript : MonoBehaviour
     public float ray_distance = 1f;
 
     public Transform GroundDetect;
-    Rigidbody2D rb;
 
-    private void Start()
+    public bool ShieldOn = true;
+
+    public static BlobScript instance;
+
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-        RaycastHit2D groundinfo = Physics2D.Raycast(GroundDetect.position, Vector2.down, ray_distance);
-        Debug.DrawRay(GroundDetect.position, Vector2.down, Color.green);
-        if (groundinfo.collider == false)
+        if(gameObject.transform.childCount == 2)
         {
-            if (movingleft == true)
+            ShieldOn = false;
+        }
+        else
+        {
+            ShieldOn = true;
+        }
+        if (ShieldOn == true)
+        {
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+            RaycastHit2D groundinfo = Physics2D.Raycast(GroundDetect.position, Vector2.down, ray_distance);
+            if (groundinfo.collider == false)
             {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingleft = false;
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingleft = true;
+                if (movingleft == true)
+                {
+                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    movingleft = false;
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    movingleft = true;
+                }
             }
         }
     }
