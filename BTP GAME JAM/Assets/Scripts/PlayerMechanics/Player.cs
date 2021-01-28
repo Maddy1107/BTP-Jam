@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -21,6 +22,14 @@ public class Player : MonoBehaviour
     public GameObject firepoint;
 
     public static Player instance;
+
+    public Slider health;
+
+    public Image healthFill;
+
+    public Gradient healthbargradient;
+
+    public Text PercentText;
 
     private void Awake()
     {
@@ -51,6 +60,9 @@ public class Player : MonoBehaviour
             Shoot();
         }
 
+        health.value = playerHealth;
+        healthFill.color = healthbargradient.Evaluate(health.normalizedValue);
+        PercentText.text = playerHealth + " % ";
     }
 
     private void FixedUpdate()

@@ -209,6 +209,38 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5350775335935148217, guid: c8e71f061252a75418a2c7cb49a80f80,
     type: 3}
   firepoint: {fileID: 1607254945}
+  health: {fileID: 0}
+  healthFill: {fileID: 0}
+  healthbargradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 0.9811321, g: 0.973446, b: 0.023139905, a: 1}
+    key2: {r: 0.06941971, g: 0.9811321, b: 0.081878446, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 34310
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  PercentText: {fileID: 0}
 --- !u!1 &6758686680555606063
 GameObject:
   m_ObjectHideFlags: 0

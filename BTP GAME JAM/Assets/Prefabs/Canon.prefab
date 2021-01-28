@@ -41,9 +41,11 @@ GameObject:
   - component: {fileID: 1790261977399220164}
   - component: {fileID: 1790261977399220165}
   - component: {fileID: 1790261977399220166}
+  - component: {fileID: -2490344115864506040}
+  - component: {fileID: 1156332597}
   m_Layer: 0
   m_Name: Canon
-  m_TagString: Untagged
+  m_TagString: Canon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +131,53 @@ MonoBehaviour:
   stone: {fileID: 8115031908901442654, guid: 1ecbe50736789b34bacc460e7ec0d6a4, type: 3}
   canonFirePoint: {fileID: 363200519034063270}
   firerate: 4
+--- !u!60 &-2490344115864506040
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790261977399220167}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.49999988, y: 0.98670983}
+    oldSize: {x: 0.75, y: 1.4375}
+    newSize: {x: 0.75, y: 1.4375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.2875001, y: 0.019104576}
+      - {x: -0.33749992, y: 0.019104576}
+      - {x: -0.3749999, y: -0.06839543}
+      - {x: -0.3749999, y: -0.91839546}
+      - {x: -0.3499999, y: -1.0558954}
+      - {x: -0.27499992, y: -1.4183954}
+      - {x: 0.2750001, y: -1.4183954}
+      - {x: 0.3750001, y: -0.91839546}
+      - {x: 0.3750001, y: -0.10589542}
+      - {x: 0.3625001, y: -0.030895425}
+--- !u!114 &1156332597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790261977399220167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43fd989068caea4799eda19bc9c95e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 1
+  currentHP: 0
+  animator: {fileID: 0}

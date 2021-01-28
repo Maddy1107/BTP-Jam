@@ -17,7 +17,7 @@ public class Crusher : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "CrushHurter")
+        if (collision.gameObject.tag == "CrushHurter" && BlobScript.instance.ShieldOn == false) 
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(givenDamage);
             timeManager.SlowMotion();

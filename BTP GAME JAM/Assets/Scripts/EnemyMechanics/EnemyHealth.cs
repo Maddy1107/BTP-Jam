@@ -25,17 +25,29 @@ public class EnemyHealth : MonoBehaviour
             }
             else if(gameObject.tag == "CrushHurter")
             {
+                animator.SetBool("Destroyed", true);
                 Destroy(transform.parent.gameObject);
             }
             else if (gameObject.tag == "BlobShield")
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
+                animator.SetBool("ShieldDestroyed", true);
+                BlobScript.instance.ShieldOn = false;
             }
             else if(gameObject.tag == "FlyingEnemyShield")
             {
                 gameObject.SetActive(false);
                 animator.SetBool("ShieldDestroyed", true);
                 FlyingEnemy.instance.ShieldOn = false;
+            }
+            else if (gameObject.tag == "CanonStone")
+            {
+                animator.SetBool("Break", true);
+            }
+            else if (gameObject.tag == "Canon")
+            {
+                animator.SetBool("Destroyed", true);
+                Destroy(gameObject, 1);
             }
         }
     }

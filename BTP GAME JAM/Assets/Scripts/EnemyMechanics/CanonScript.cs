@@ -15,11 +15,14 @@ public class CanonScript : MonoBehaviour
 
     public GameObject canonFirePoint;
 
-    public float firerate = 4f;
+    public float firerate = 10f;
 
     void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         enemyShootDirection = (player.position - transform.position).normalized;
         transform.up = -enemyShootDirection;
         if (NextFire < Time.time)

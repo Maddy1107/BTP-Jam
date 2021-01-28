@@ -12,6 +12,8 @@ public class PlayerSpellShootScript : MonoBehaviour
 
     public ParticleSystem enemyHit;
 
+    public ParticleSystem enemyHit1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class PlayerSpellShootScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy" && FlyingEnemy.instance.ShieldOn == false)
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
@@ -50,19 +52,43 @@ public class PlayerSpellShootScript : MonoBehaviour
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
             {
-                Destroy(collision.gameObject);
+                //Destroy(collision.gameObject);
             }
             Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "FlyingEnemyShield")
         {
-            ParticleSystem enemyHitPrefab = Instantiate(enemyHit, collision.gameObject.transform.position, Quaternion.identity);
-            Destroy(enemyHitPrefab, 1);
+            Instantiate(enemyHit, collision.gameObject.transform.position, Quaternion.identity);
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             if (collision.gameObject.GetComponent<EnemyHealth>().getHP() <= 0)
             {
                 //Destroy(collision.gameObject, 1);
             }
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "FlyingEnemyBullet")
+        {
+            //ParticleSystem enemyHitPrefab = Instantiate(enemyHit, collision.gameObject.transform.position, Quaternion.identity);
+            //Destroy(enemyHitPrefab, 1);
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "CanonStone")
+        {
+            ParticleSystem enemyHitPrefab = Instantiate(enemyHit1, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(enemyHitPrefab, 1);
+            collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            timeManager.SlowMotion();
+            collision.gameObject.GetComponent<EnemyHealth>().animator.SetBool("Break", true);
+            Destroy(collision.gameObject, 0.5f);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Canon"))
+        {
+            ParticleSystem enemyHitPrefab = Instantiate(enemyHit1, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(enemyHitPrefab, 1);
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            timeManager.SlowMotion();
             Destroy(gameObject);
         }
     }

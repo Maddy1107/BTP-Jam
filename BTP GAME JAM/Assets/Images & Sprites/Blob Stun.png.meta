@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 64657aeb6ed4a4c498429bacf8af16ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1088402055199399472
+    second: Blob Stun_0
+  - first:
+      213: -5415367079102924008
+    second: Blob Stun_1
+  - first:
+      213: 8146732881302697527
+    second: Blob Stun_2
+  - first:
+      213: 1085099556517800873
+    second: Blob Stun_3
+  - first:
+      213: -5527496167160674644
+    second: Blob Stun_4
+  - first:
+      213: -2480201111528865390
+    second: Blob Stun_5
+  - first:
+      213: -4285545143200613498
+    second: Blob Stun_6
+  - first:
+      213: 5040919960706532966
+    second: Blob Stun_7
+  - first:
+      213: 1645752115185772340
+    second: Blob Stun_8
+  - first:
+      213: 3970626849474329435
+    second: Blob Stun_9
+  - first:
+      213: -1161181199331723900
+    second: Blob Stun_10
+  - first:
+      213: -2449053826675990671
+    second: Blob Stun_11
+  - first:
+      213: 6130844264961384512
+    second: Blob Stun_12
+  - first:
+      213: 6864527806520200238
+    second: Blob Stun_13
+  - first:
+      213: -3985261342828693873
+    second: Blob Stun_14
+  - first:
+      213: -807714346024139893
+    second: Blob Stun_15
+  - first:
+      213: 7302022037277753500
+    second: Blob Stun_16
+  - first:
+      213: -1442974255954494530
+    second: Blob Stun_17
+  - first:
+      213: -8852735761295545386
+    second: Blob Stun_18
+  - first:
+      213: 8142827282522473304
+    second: Blob Stun_19
+  - first:
+      213: -1185985713130131423
+    second: Blob Stun_20
+  - first:
+      213: 7344200758366225272
+    second: Blob Stun_21
+  - first:
+      213: 295869723913792613
+    second: Blob Stun_22
+  - first:
+      213: 5751076939696480992
+    second: Blob Stun_23
+  - first:
+      213: 4491733235207098273
+    second: Blob Stun_24
+  - first:
+      213: 2223866451172288581
+    second: Blob Stun_25
+  - first:
+      213: 1885760758045248588
+    second: Blob Stun_26
+  - first:
+      213: -6054611550643572521
+    second: Blob Stun_27
+  - first:
+      213: 3960286339968188333
+    second: Blob Stun_28
+  - first:
+      213: -9061601808631412227
+    second: Blob Stun_29
+  - first:
+      213: -5649080750140446410
+    second: Blob Stun_30
+  - first:
+      213: 4562068599559274749
+    second: Blob Stun_31
+  - first:
+      213: 3127694840961093144
+    second: Blob Stun_32
+  - first:
+      213: -805034161454738044
+    second: Blob Stun_33
+  - first:
+      213: 4827144225318270024
+    second: Blob Stun_34
+  - first:
+      213: -6797884019303160174
+    second: Blob Stun_35
+  - first:
+      213: 808291486278847077
+    second: Blob Stun_36
+  - first:
+      213: 674764335828751624
+    second: Blob Stun_37
+  - first:
+      213: 5658038518376969981
+    second: Blob Stun_38
+  - first:
+      213: -2716042056738099096
+    second: Blob Stun_39
+  - first:
+      213: 8604377897162587651
+    second: Blob Stun_40
+  - first:
+      213: -2711313585023342029
+    second: Blob Stun_41
+  - first:
+      213: 5215782043383714382
+    second: Blob Stun_42
+  - first:
+      213: -8691119790478478521
+    second: Blob Stun_43
+  - first:
+      213: -5023356714822366079
+    second: Blob Stun_44
+  - first:
+      213: -7455376630784571363
+    second: Blob Stun_45
+  - first:
+      213: -6143768779694319123
+    second: Blob Stun_46
+  - first:
+      213: -7907259844928329756
+    second: Blob Stun_47
+  - first:
+      213: 1236798401496128729
+    second: Blob Stun_48
+  - first:
+      213: 6200597969299524498
+    second: Blob Stun_49
+  - first:
+      213: -4934684146819863771
+    second: Blob Stun_50
+  - first:
+      213: -580558839465888569
+    second: Blob Stun_51
+  - first:
+      213: 1853429327605438996
+    second: Blob Stun_52
+  - first:
+      213: -5723380044754503331
+    second: Blob Stun_53
+  - first:
+      213: 5608933044979334703
+    second: Blob Stun_54
+  - first:
+      213: -3650008903731829755
+    second: Blob Stun_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blob Stun_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 200
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437eef544d2e6d610800000000000000
+      internalID: 1645752115185772340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob Stun_18
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 200
+        width: 130
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbe4999ab3c42580800000000000000
+      internalID: -8852735761295545386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob Stun_47
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 40
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e72654c015c34290800000000000000
+      internalID: -7907259844928329756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob Stun_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 40
+        width: 125
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc92f3e79df92110800000000000000
+      internalID: 1236798401496128729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

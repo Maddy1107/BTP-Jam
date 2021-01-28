@@ -32,10 +32,9 @@ public class EnemySpellShootScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            ParticleSystem playerHitPrefab = Instantiate(playerHit, collision.gameObject.transform.position, Quaternion.identity);
-            Destroy(playerHitPrefab, 1);
+            Instantiate(playerHit, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Player.instance.playerHealth -= 10;
+            Player.instance.playerHealth -= 2;
             if (Player.instance.playerHealth == 0)
             {
                 Destroy(collision.gameObject);

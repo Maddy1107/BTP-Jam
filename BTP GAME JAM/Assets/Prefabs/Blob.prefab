@@ -201,6 +201,10 @@ MonoBehaviour:
   movingleft: 1
   ray_distance: 1
   GroundDetect: {fileID: 2062261887}
+  shield: {fileID: 7256044899775033802}
+  shieldcooldowntime: 5
+  nextshieldspawn: 0
+  isCooldown: 1
   ShieldOn: 1
 --- !u!1 &7256044899775033802
 GameObject:
@@ -276,7 +280,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -6717884257390833292, guid: e2215c5482a616647a1f13580a16beb8,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -300,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: 10
   currentHP: 0
-  animator: {fileID: 0}
+  animator: {fileID: 8777446459561281034}
 --- !u!60 &2127943544
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -366,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7680340991820235332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4477294487902310073}

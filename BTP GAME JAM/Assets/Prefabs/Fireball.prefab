@@ -421,3 +421,5 @@ MonoBehaviour:
   speed: 10
   enemyHit: {fileID: 5605863115937202307, guid: 9168452708c7d2648bde094495951223,
     type: 3}
+  enemyHit1: {fileID: 885090440249149005, guid: 110e453b990027e46ab0184e0d9c5e92,
+    type: 3}
