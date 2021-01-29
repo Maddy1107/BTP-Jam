@@ -39,7 +39,7 @@ public class EnemySpellShootScript : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
-
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
     }
 }

@@ -5,7 +5,7 @@ public class FlyingEnemy : MonoBehaviour
     public GameObject EnemyFirepoint;
     Transform player;
     public float enemyspeed = 6f;
-    public float enemyFirerate = 4f;
+    public float enemyFirerate = 2f;
     float NextFire;
 
     public GameObject blades;
@@ -42,37 +42,40 @@ public class FlyingEnemy : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         }
-        //enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemyWaveSpawner>();
+        enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemyWaveSpawner>();
         nextshieldspawn = shieldcooldowntime;
     }
 
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if (GameManager.instance.gameplay == true && GameManager.instance.gameOver == false && GameManager.instance.gamewin == false)
         {
-            if (ShieldOn == true)
+            if (GameObject.FindGameObjectWithTag("Player") != null)
             {
-                /*if (nextpositionChangetime < Time.time)
+                if (ShieldOn == true)
                 {
-                    Transform randomspawnPoint = enemySpawner.FlyingEnemyspawnpoints[Random.Range(0, enemySpawner.FlyingEnemyspawnpoints.Length)];
-                    transform.position = randomspawnPoint.position;
-                    nextpositionChangetime = Time.time + 2;
-                }*/
-                EnemyMove();
-            }
-            else
-            {
-                if (nextshieldspawn <= 0)
-                {
-                    ShieldOn = true;
-                    nextshieldspawn = shieldcooldowntime;
-                    shield.gameObject.SetActive(true);
-                    shield.GetComponent<EnemyHealth>().setHP(10);
-                    shield.GetComponent<EnemyHealth>().animator.SetBool("ShieldDestroyed", false);
+                    if (nextpositionChangetime < Time.time)
+                    {
+                        Transform randomspawnPoint = enemySpawner.Blobspawnpoints[Random.Range(0, enemySpawner.Blobspawnpoints.Length)];
+                        transform.position = randomspawnPoint.position;
+                        nextpositionChangetime = Time.time + 2;
+                    }
+                    EnemyMove();
                 }
                 else
                 {
-                    nextshieldspawn -= Time.deltaTime;
+                    if (nextshieldspawn <= 0)
+                    {
+                        ShieldOn = true;
+                        nextshieldspawn = shieldcooldowntime;
+                        shield.gameObject.SetActive(true);
+                        shield.GetComponent<EnemyHealth>().setHP(10);
+                        shield.GetComponent<EnemyHealth>().animator.SetBool("ShieldDestroyed", false);
+                    }
+                    else
+                    {
+                        nextshieldspawn -= Time.deltaTime;
+                    }
                 }
             }
         }
@@ -81,17 +84,14 @@ public class FlyingEnemy : MonoBehaviour
 
     private void EnemyMove()
     {
-        if (Vector2.Distance(transform.position, player.position) > 5)
+        if (Vector2.Distance(transform.position, player.position) > 3)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, enemyspeed * Time.deltaTime);
         }
-        else
+        if (NextFire < Time.time)
         {
-            if (NextFire < Time.time)
-            {
-                EnemyShoot();
-                NextFire = Time.time + enemyFirerate;
-            }
+            EnemyShoot();
+            NextFire = Time.time + enemyFirerate;
         }
         float avoidSpeed = enemyspeed / 2f;
         float avoidRadius = 1f;
@@ -122,5 +122,6 @@ public class FlyingEnemy : MonoBehaviour
     private void EnemyShoot()
     {
         Instantiate(blades, EnemyFirepoint.transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("Shoot");
     }
 }

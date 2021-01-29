@@ -18,6 +18,8 @@ public class EnemyHealth : MonoBehaviour
 
     public ParticleSystem enemyHit1;
 
+    public bool completed = false;
+
     void Start()
     {
         currentHP = enemyHP;
@@ -59,11 +61,21 @@ public class EnemyHealth : MonoBehaviour
                 animator.SetBool("Destroyed", true);
                 Destroy(gameObject, 1);
             }
-            else if (gameObject.tag == "Canon")
+            else if (gameObject.tag == "Boss")
             {
-                animator.SetBool("Destroyed", true);
+                Instantiate(enemyHit1, gameObject.transform.position, Quaternion.identity);
+                animator.SetBool("Dead", true);
                 Destroy(gameObject, 1);
                 GameManager.instance.Winagme();
+            }
+            if(completed == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Blast");
+                completed = true;
+            }
+            else
+            {
+                completed = true;
             }
         }
 

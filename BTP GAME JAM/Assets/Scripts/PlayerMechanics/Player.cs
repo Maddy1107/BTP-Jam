@@ -33,6 +33,11 @@ public class Player : MonoBehaviour
 
     public float repelForcce = 15;
 
+    Animator animator;
+
+    public float nextShootTime;
+    public float Firerate = 1;
+
     private void Awake()
     {
         if(instance == null)
@@ -48,6 +53,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -56,6 +62,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && isGrounded == true)
             {
+                animator.SetTrigger("Jump");
                 rb.velocity = Vector2.up * jumpstrength;
             }
             if (Input.GetMouseButtonDown(0))
@@ -82,14 +89,23 @@ public class Player : MonoBehaviour
         if (GameManager.instance.gameplay == true && GameManager.instance.gameOver == false && GameManager.instance.gamewin == false)
         {
             isGrounded = Physics2D.OverlapCircle(GroundCheck.position, checkRadius, whatisGround);
-
             xMoveInput = Input.GetAxis("Horizontal");
+            if(xMoveInput != 0)
+            {
+                animator.SetTrigger("Walk");
+                animator.SetBool("idle", false);
+            }
+            else
+            {
+                animator.SetBool("idle", true);
+            }
             rb.velocity = new Vector2(xMoveInput * playermoveSpeed, rb.velocity.y);
         }
     }
 
     void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("Shoot");
         GameObject spell = Instantiate(bulletPrefab, firepoint.transform.position, Quaternion.identity);
         Rigidbody2D spellrb = spell.GetComponent<Rigidbody2D>();
         spellrb.AddForce(Vector2.right * playermoveSpeed, ForceMode2D.Impulse);
@@ -101,6 +117,19 @@ public class Player : MonoBehaviour
         {
             playerHealth -= 2;
             rb.AddForce(transform.up * repelForcce, ForceMode2D.Impulse);
+        }
+        else if (collision.tag == "Boss")
+        {
+            playerHealth -= 2;
+            rb.AddForce(transform.up * repelForcce, ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Lava")
+        {
+            GameManager.instance.LostGAme();
         }
     }
 }

@@ -30,7 +30,7 @@ public class PlayerSpellShootScript : MonoBehaviour
     {
         transform.up = moveDirection;
         transform.position = transform.position + moveDirection * speed * Time.deltaTime;
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 
     public void CalculateDirectiontoMouse()
@@ -51,18 +51,21 @@ public class PlayerSpellShootScript : MonoBehaviour
                 timeManager.SlowMotion();
             }
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
         else if (collision.gameObject.tag == "BlobShield")
         {
             Instantiate(enemyHit, collision.gameObject.transform.position, Quaternion.identity);
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
         else if (collision.gameObject.tag == "FlyingEnemyShield")
         {
             Instantiate(enemyHit, collision.gameObject.transform.position, Quaternion.identity);
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
         else if (collision.gameObject.tag == "FlyingEnemyBullet")
         {
@@ -74,9 +77,9 @@ public class PlayerSpellShootScript : MonoBehaviour
         {
             Instantiate(enemyHit1, collision.gameObject.transform.position, Quaternion.identity);
             collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            timeManager.SlowMotion();
             collision.gameObject.GetComponent<EnemyHealth>().animator.SetBool("Break", true);
             Destroy(collision.gameObject, 0.5f);
+            FindObjectOfType<AudioManager>().Play("Blast");
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Canon"))
@@ -88,6 +91,7 @@ public class PlayerSpellShootScript : MonoBehaviour
                 timeManager.SlowMotion();
             }
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
         else if (collision.gameObject.CompareTag("Boss"))
         {
@@ -98,6 +102,7 @@ public class PlayerSpellShootScript : MonoBehaviour
                 timeManager.SlowMotion();
             }
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
     }
 }

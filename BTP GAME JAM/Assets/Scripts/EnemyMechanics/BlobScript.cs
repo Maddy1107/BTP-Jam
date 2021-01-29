@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class BlobScript : MonoBehaviour
@@ -26,6 +23,9 @@ public class BlobScript : MonoBehaviour
 
     public GameObject ShieldHUD;
 
+    EnemyWaveSpawner enemySpawner;
+    private float nextpositionChangetime;
+
     private void Awake()
     {
         if (instance == null)
@@ -41,12 +41,19 @@ public class BlobScript : MonoBehaviour
     private void Start()
     {
         nextshieldspawn = shieldcooldowntime;
+        enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemyWaveSpawner>();
     }
 
     void Update()
     {
         if (ShieldOn == true)
         {
+            if (nextpositionChangetime < Time.time)
+            {
+                Transform randomspawnPoint = enemySpawner.FlyingEnemyspawnpoints[Random.Range(0, enemySpawner.FlyingEnemyspawnpoints.Length)];
+                transform.position = randomspawnPoint.position;
+                nextpositionChangetime = Time.time + 2;
+            }
             BlobMove();
         }
         else
@@ -71,7 +78,6 @@ public class BlobScript : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         RaycastHit2D groundinfo = Physics2D.Raycast(GroundDetect.position, Vector2.down, ray_distance);
-        Debug.Log(groundinfo.collider.tag);
         if (groundinfo.collider == false || groundinfo.collider.tag == "Lava")
         {
             if (movingleft == true)

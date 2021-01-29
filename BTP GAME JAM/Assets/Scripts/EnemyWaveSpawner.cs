@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Waves
@@ -39,6 +40,13 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     Transform randomspawnPoint;
 
+    public Text flyHowto;
+    public Text blobHowTo;
+    public Text canonHowTo;
+    public Text bossHowTo;
+
+    public GameObject Lava;
+
     SpawnState state = SpawnState.waitingToStart;
 
     private void Start()
@@ -75,12 +83,18 @@ public class EnemyWaveSpawner : MonoBehaviour
                 CalculateLavaDecrease();
                 levelComplete.gameObject.SetActive(true);
                 GameManager.instance.pauseGamePlay();
+                flyHowto.gameObject.SetActive(false);
+                blobHowTo.gameObject.SetActive(false);
+                canonHowTo.gameObject.SetActive(false);
+                bossHowTo.gameObject.SetActive(false);
             }
         }
     }
 
     private void CalculateLavaDecrease()
     {
+        float distance1 = 0.5f;
+        float distance2 = 1f;
         float elapsedwavetime = waveendtime - wavestarttime;
         Debug.Log(elapsedwavetime);
 
@@ -94,17 +108,30 @@ public class EnemyWaveSpawner : MonoBehaviour
         }
         if (elapsedwavetime < 30)
         {
-            //total size/3
+            while (distance2 > 0)
+            {
+                Vector2 Lavay = Lava.transform.position;
+                Lavay.y -= 0.1f;
+                Lava.transform.position = Lavay;
+                distance2 -= 0.1f;
+            }
+            distance2 = 1.5f;
         }
         else if (elapsedwavetime > 30 || elapsedwavetime < 60)
         {
-            //total size/1.5
+            while (distance1 > 0)
+            {
+                Vector2 Lavay = Lava.transform.position;
+                Lavay.y -= 0.1f;
+                Lava.transform.position = Lavay;
+                distance1 -= 0.1f;
+            }
+            distance1 = 0.5f;
         }
     }
 
     public void StartNewLevel()
     {
-        GameManager.instance.StartGame();
         state = SpawnState.waitingToStart;
         waitTostartInterval = 5f;
         ongoingWavenumber += 1;
@@ -118,7 +145,6 @@ public class EnemyWaveSpawner : MonoBehaviour
         {
             randomspawnPoint = FlyingEnemyspawnpoints[Random.Range(0, FlyingEnemyspawnpoints.Length)];
             Instantiate(_waves.enemy, randomspawnPoint.transform.position, Quaternion.identity);
-            Debug.Log("ENTERED");
         }
         else if(ongoingWavenumber == 1)
         {
@@ -129,6 +155,10 @@ public class EnemyWaveSpawner : MonoBehaviour
         {
             Instantiate(_waves.enemy, Canonspawnpoints[index].transform.position, Quaternion.identity);
             index += 1;
+        }
+        else if (ongoingWavenumber == 3)
+        {
+            Instantiate(_waves.enemy, Bossspawnpoints[index].transform.position, Quaternion.identity);
         }
         WaveEnemyCount--;
         nextspawntime = Time.time + _waves.enemySpawnInterval;
@@ -143,10 +173,58 @@ public class EnemyWaveSpawner : MonoBehaviour
     private bool checkEnemyAlive()
     {
         if (GameObject.FindGameObjectsWithTag("FlyingEnemy").Length == 0 && GameObject.FindGameObjectsWithTag("Blob").Length == 0 
-            && GameObject.FindGameObjectsWithTag("Canon").Length == 0)
+            && GameObject.FindGameObjectsWithTag("Canon").Length == 0 && GameObject.FindGameObjectsWithTag("Boss").Length == 0)
         {
             return false;
         }
         return true;
+    }
+
+    public void HowToOpen()
+    {
+        if(ongoingWavenumber == 0)
+        {
+            if (flyHowto.gameObject.activeSelf == false)
+            {
+                flyHowto.gameObject.SetActive(true);
+            }
+            else
+            {
+                flyHowto.gameObject.SetActive(false);
+            }
+        }
+        else if(ongoingWavenumber == 1)
+        {
+            if (blobHowTo.gameObject.activeSelf == false)
+            {
+                blobHowTo.gameObject.SetActive(true);
+            }
+            else
+            {
+                blobHowTo.gameObject.SetActive(false);
+            }
+        }
+        else if(ongoingWavenumber == 2)
+        {
+            if (canonHowTo.gameObject.activeSelf == false)
+            {
+                canonHowTo.gameObject.SetActive(true);
+            }
+            else
+            {
+                canonHowTo.gameObject.SetActive(false);
+            }
+        }    
+        else
+        {
+            if (bossHowTo.gameObject.activeSelf == false)
+            {
+                bossHowTo.gameObject.SetActive(true);
+            }
+            else
+            {
+                bossHowTo.gameObject.SetActive(false);
+            }
+        }
     }
 }

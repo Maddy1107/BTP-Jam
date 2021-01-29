@@ -180,36 +180,6 @@ Transform:
   m_Father: {fileID: 4036082501214281880}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2085953382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2085953383}
-  m_Layer: 9
-  m_Name: BlobSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2085953383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085953382}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.81, y: -0.79, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2466358653408535513}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1158210578611303770
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,9 +297,9 @@ MonoBehaviour:
   - enemyCount: 4
     enemySpawnInterval: 0
     enemy: {fileID: 1790261977399220164, guid: 8a16bdd172eabc54bb7907a44bcf3348, type: 3}
-  - enemyCount: 0
+  - enemyCount: 1
     enemySpawnInterval: 0
-    enemy: {fileID: 0}
+    enemy: {fileID: 5692802446788865961, guid: 1d32a481c68fef849b5f253049849511, type: 3}
   FlyingEnemyspawnpoints:
   - {fileID: 1158210579160374780}
   - {fileID: 1158210578611303765}
@@ -343,7 +313,7 @@ MonoBehaviour:
   Blobspawnpoints:
   - {fileID: 143589692}
   - {fileID: 1086093296}
-  - {fileID: 2085953383}
+  - {fileID: 0}
   Bossspawnpoints:
   - {fileID: 5711227871217003960}
   - {fileID: 2457707159913443509}
@@ -356,6 +326,11 @@ MonoBehaviour:
   waveendtime: 0
   levelComplete: {fileID: 0}
   TimeTaken: {fileID: 0}
+  flyHowto: {fileID: 0}
+  blobHowTo: {fileID: 0}
+  canonHowTo: {fileID: 0}
+  bossHowTo: {fileID: 0}
+  Lava: {fileID: 0}
 --- !u!1 &1158210580026848313
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +612,6 @@ Transform:
   m_Children:
   - {fileID: 143589692}
   - {fileID: 1086093296}
-  - {fileID: 2085953383}
   m_Father: {fileID: 1158210579935508010}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

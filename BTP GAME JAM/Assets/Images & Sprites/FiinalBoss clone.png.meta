@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 1e46a01f491695043b0b77db1258be9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3857428062924981112
+    second: FiinalBoss clone_0
+  - first:
+      213: 8134124782466196499
+    second: FiinalBoss clone_1
+  - first:
+      213: 7990467128555665402
+    second: FiinalBoss clone_2
+  - first:
+      213: 7903791741552435728
+    second: FiinalBoss clone_3
+  - first:
+      213: -5530690464768071943
+    second: FiinalBoss clone_4
+  - first:
+      213: 5695028203975139630
+    second: FiinalBoss clone_5
+  - first:
+      213: -5041934338923667986
+    second: FiinalBoss clone_6
+  - first:
+      213: 1847351187561306031
+    second: FiinalBoss clone_7
+  - first:
+      213: 2080454919379786314
+    second: FiinalBoss clone_8
+  - first:
+      213: 3835887095877625858
+    second: FiinalBoss clone_9
+  - first:
+      213: 7337580145552117657
+    second: FiinalBoss clone_10
+  - first:
+      213: 4260936081167411396
+    second: FiinalBoss clone_11
+  - first:
+      213: 1642751518760432715
+    second: FiinalBoss clone_12
+  - first:
+      213: 2042791885057359880
+    second: FiinalBoss clone_13
+  - first:
+      213: -5603502079319944949
+    second: FiinalBoss clone_14
+  - first:
+      213: -6065814868650096262
+    second: FiinalBoss clone_15
+  - first:
+      213: 1296340527080635594
+    second: FiinalBoss clone_16
+  - first:
+      213: -8021566909091959618
+    second: FiinalBoss clone_17
+  - first:
+      213: 1492721882580032672
+    second: FiinalBoss clone_18
+  - first:
+      213: 1532000465962256085
+    second: FiinalBoss clone_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FiinalBoss clone_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873444db266588530800000000000000
+      internalID: 3857428062924981112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 355
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3146999a46732e070800000000000000
+      internalID: 8134124782466196499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 355
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7fef2a487d3ee60800000000000000
+      internalID: 7990467128555665402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 189
+        width: 150
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01226ed76b8efad60800000000000000
+      internalID: 7903791741552435728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 195
+        width: 150
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6ebdc335a0f33b0800000000000000
+      internalID: -5530690464768071943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 189
+        width: 150
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21e4cb5afdc80f40800000000000000
+      internalID: 5695028203975139630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 6
+        width: 150
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a98d8f9b24fdc10800000000000000
+      internalID: 2080454919379786314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiinalBoss clone_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 150
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed5c9b9e63770ab0800000000000000
+      internalID: -5041934338923667986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

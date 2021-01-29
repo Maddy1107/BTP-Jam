@@ -58,13 +58,14 @@ public class GameManager : MonoBehaviour
         gameplay = false;
         gameOver = true;
         gameOverHUD.gameObject.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("GameOver");
     }
 
     public void Winagme()
     {
         gameplay = false;
         gamewin = true;
-        gameOverHUD.gameObject.SetActive(true);
+        gameWinHUD.gameObject.SetActive(true);
     }
 
     public void coroutinestart()

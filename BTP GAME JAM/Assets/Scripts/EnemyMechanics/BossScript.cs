@@ -13,10 +13,10 @@ public class BossScript : MonoBehaviour
     public GameObject EnemyFirepoint;
     Transform player;
     public float enemyFirerate = 4f;
-    public float NextFire;
+    public float NextFire = 4f;
 
     public float dashSpeed;
-    public float nextdashTime;
+    public float nextdashTime = 20;
     public float dashstarttime;
     public float dashRate = 20;
 
@@ -24,8 +24,17 @@ public class BossScript : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public GameObject BossHUD;
+
     EnemyWaveSpawner enemySpawner;
     private float nextpositionChangetime;
+    Transform randomspawnPoint;
+
+    public float nextbabyspawnTime = 3;
+    public float nextbabyspawnRate = 5;
+    public GameObject babyenemies;
+
+    public GameObject dashParticle;
 
     private void Start()
     {
@@ -37,15 +46,26 @@ public class BossScript : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
+            BossHUD.gameObject.SetActive(true);
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             if(dashstarttime > 0)
             {
+                GameObject dashParticles = Instantiate(dashParticle, EnemyFirepoint.transform.position, Quaternion.identity);
+                Destroy(dashParticles, 2);
                 dashstarttime -= Time.deltaTime;
                 rb.velocity = (player.position - transform.position).normalized * dashSpeed;
             }
             else
             {
                 rb.velocity = Vector2.zero;
+                if (transform.position != randomspawnPoint.position)
+                {
+                    transform.position += (randomspawnPoint.position - transform.position).normalized * 10 * Time.deltaTime;
+                }
+                else
+                {
+                    transform.position = randomspawnPoint.position;
+                }
             }
                 
             if (nextdashTime < Time.time)
@@ -54,9 +74,16 @@ public class BossScript : MonoBehaviour
                 nextdashTime = Time.time + dashRate;
             }
 
+            if(nextbabyspawnTime < Time.time)
+            {
+                Instantiate(babyenemies, EnemyFirepoint.transform.position, Quaternion.identity);
+                Instantiate(babyenemies, EnemyFirepoint.transform.position, Quaternion.identity);
+                Instantiate(babyenemies, EnemyFirepoint.transform.position, Quaternion.identity);
+            }
+
             if (nextpositionChangetime < Time.time)
             {
-                Transform randomspawnPoint = enemySpawner.Bossspawnpoints[Random.Range(0, enemySpawner.Bossspawnpoints.Length)];
+                randomspawnPoint = enemySpawner.Bossspawnpoints[Random.Range(0, enemySpawner.Bossspawnpoints.Length)];
                 transform.position = randomspawnPoint.position;
                 nextpositionChangetime = Time.time + 6;
 
