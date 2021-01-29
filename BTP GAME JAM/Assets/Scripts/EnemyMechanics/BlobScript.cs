@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlobScript : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class BlobScript : MonoBehaviour
     public bool ShieldOn = true;
 
     public static BlobScript instance;
+
+    public GameObject ShieldHUD;
 
     private void Awake()
     {
@@ -51,7 +54,7 @@ public class BlobScript : MonoBehaviour
             if (nextshieldspawn <= 0)
             {
                 ShieldOn = true;
-                nextshieldspawn = 0;
+                nextshieldspawn = 5;
                 shield.gameObject.SetActive(true);
                 shield.GetComponent<EnemyHealth>().setHP(10);
                 shield.GetComponent<EnemyHealth>().animator.SetBool("ShieldDestroyed", false);
@@ -68,7 +71,8 @@ public class BlobScript : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         RaycastHit2D groundinfo = Physics2D.Raycast(GroundDetect.position, Vector2.down, ray_distance);
-        if (groundinfo.collider == false)
+        Debug.Log(groundinfo.collider.tag);
+        if (groundinfo.collider == false || groundinfo.collider.tag == "Lava")
         {
             if (movingleft == true)
             {
@@ -81,5 +85,6 @@ public class BlobScript : MonoBehaviour
                 movingleft = true;
             }
         }
+
     }
 }

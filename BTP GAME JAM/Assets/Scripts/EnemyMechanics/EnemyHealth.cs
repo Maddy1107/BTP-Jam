@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -8,6 +9,14 @@ public class EnemyHealth : MonoBehaviour
     public float currentHP;
 
     public Animator animator;
+
+    public Slider health;
+
+    public Image healthFill;
+
+    public Gradient healthbargradient;
+
+    public ParticleSystem enemyHit1;
 
     void Start()
     {
@@ -18,8 +27,9 @@ public class EnemyHealth : MonoBehaviour
     {
         if(currentHP <= 0)
         {
-            if (gameObject.tag == "Enemy")
+            if (gameObject.tag == "FlyingEnemy")
             {
+                Instantiate(enemyHit1, gameObject.transform.position, Quaternion.identity);
                 animator.SetBool("Destroyed", true);
                 Destroy(gameObject, 1);
             }
@@ -49,7 +59,16 @@ public class EnemyHealth : MonoBehaviour
                 animator.SetBool("Destroyed", true);
                 Destroy(gameObject, 1);
             }
+            else if (gameObject.tag == "Canon")
+            {
+                animator.SetBool("Destroyed", true);
+                Destroy(gameObject, 1);
+                GameManager.instance.Winagme();
+            }
         }
+
+        health.value = currentHP;
+        healthFill.color = healthbargradient.Evaluate(health.normalizedValue);
     }
 
     public void TakeDamage(int damage)

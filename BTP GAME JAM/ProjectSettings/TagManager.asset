@@ -16,6 +16,9 @@ TagManager:
   - FlyingEnemyBullet
   - CanonStone
   - Canon
+  - Lava
+  - FlyingEnemy
+  - Boss
   layers:
   - Default
   - TransparentFX

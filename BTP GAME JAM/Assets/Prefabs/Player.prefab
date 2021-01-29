@@ -241,6 +241,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   PercentText: {fileID: 0}
+  repelForcce: 15
 --- !u!1 &6758686680555606063
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 8e5b68af5ec00ec40b12b0e2f3310c4b
+guid: d1b03e448645e0448811fa5f880ba8b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3256077515054275071
-    second: Canon (1)_0
+      213: -7321320715025566293
+    second: nill_0
+  - first:
+      213: -6830784871481996837
+    second: nill_1
+  - first:
+      213: 2913416599979303266
+    second: nill_2
+  - first:
+      213: -5808629856857101377
+    second: nill_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Canon (1)_0
+      name: nill_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 25
-        width: 60
-        height: 115
+        x: 0
+        y: 257
+        width: 256
+        height: 169
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +125,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 106ad0260c610d2d0800000000000000
-      internalID: -3256077515054275071
+      spriteID: ba531368991756a90800000000000000
+      internalID: -7321320715025566293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nill_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd90436b95d2431a0800000000000000
+      internalID: -6830784871481996837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nill_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 257
+        width: 255
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2612e7436f88e6820800000000000000
+      internalID: 2913416599979303266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nill_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbed4eabe9936fa0800000000000000
+      internalID: -5808629856857101377
       vertices: []
       indices: 
       edges: []

@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 7a4d28690a567ed4b9eb95d8b0b39dba
+guid: fb957be31dc10824593af431a5e20afd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -455596881648148608
-    second: NilLava_0
+      213: 2048875130906709156
+    second: FiinalBoss (1)_0
   - first:
-      213: 7106721345700955191
-    second: NilLava_1
-  - first:
-      213: 5596743548623815985
-    second: NilLava_2
-  - first:
-      213: 5476006121094158073
-    second: NilLava_3
+      213: 3427665792723783431
+    second: FiinalBoss (1)_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NilLava_0
+      name: FiinalBoss (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 255
-        height: 168
+        x: 5
+        y: 185
+        width: 130
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08f169ccc056da9f0800000000000000
-      internalID: -455596881648148608
+      spriteID: 4ac83de73111f6c10800000000000000
+      internalID: 2048875130906709156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NilLava_1
+      name: FiinalBoss (1)_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 255
-        height: 192
+        x: 5
+        y: 25
+        width: 130
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,50 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7340130396520a260800000000000000
-      internalID: 7106721345700955191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NilLava_2
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 257
-        width: 255
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1358eaaca90abad40800000000000000
-      internalID: 5596743548623815985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NilLava_3
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 1
-        width: 255
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f69ea3dd8eaefb40800000000000000
-      internalID: 5476006121094158073
+      spriteID: 70f0f00c0e3819f20800000000000000
+      internalID: 3427665792723783431
       vertices: []
       indices: 
       edges: []

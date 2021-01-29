@@ -42,7 +42,7 @@ public class FlyingEnemy : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         }
-        enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemyWaveSpawner>();
+        //enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemyWaveSpawner>();
         nextshieldspawn = shieldcooldowntime;
     }
 
@@ -65,7 +65,7 @@ public class FlyingEnemy : MonoBehaviour
                 if (nextshieldspawn <= 0)
                 {
                     ShieldOn = true;
-                    nextshieldspawn = 0;
+                    nextshieldspawn = shieldcooldowntime;
                     shield.gameObject.SetActive(true);
                     shield.GetComponent<EnemyHealth>().setHP(10);
                     shield.GetComponent<EnemyHealth>().animator.SetBool("ShieldDestroyed", false);

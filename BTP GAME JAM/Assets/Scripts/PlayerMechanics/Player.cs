@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
 
     public Text PercentText;
 
+    public float repelForcce = 15;
+
     private void Awake()
     {
         if(instance == null)
@@ -50,27 +52,40 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        if (GameManager.instance.gameplay == true && GameManager.instance.gameOver == false && GameManager.instance.gamewin == false)
         {
-            rb.velocity = Vector2.up * jumpstrength;
-        }
-        if(Input.GetMouseButtonDown(0))
-        {
-            Shoot();
+            if (Input.GetButtonDown("Jump") && isGrounded == true)
+            {
+                rb.velocity = Vector2.up * jumpstrength;
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
+
+            health.value = playerHealth;
+            healthFill.color = healthbargradient.Evaluate(health.normalizedValue);
+            if (GameObject.FindGameObjectWithTag("Player") != null)
+            {
+                PercentText.text = playerHealth + " % ";
+            }
         }
 
-        health.value = playerHealth;
-        healthFill.color = healthbargradient.Evaluate(health.normalizedValue);
-        PercentText.text = playerHealth + " % ";
+        if(playerHealth <= 0)
+        {
+            GameManager.instance.LostGAme();
+        }
     }
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, checkRadius, whatisGround);
+        if (GameManager.instance.gameplay == true && GameManager.instance.gameOver == false && GameManager.instance.gamewin == false)
+        {
+            isGrounded = Physics2D.OverlapCircle(GroundCheck.position, checkRadius, whatisGround);
 
-        xMoveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(xMoveInput * playermoveSpeed, rb.velocity.y);
+            xMoveInput = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(xMoveInput * playermoveSpeed, rb.velocity.y);
+        }
     }
 
     void Shoot()
@@ -78,5 +93,14 @@ public class Player : MonoBehaviour
         GameObject spell = Instantiate(bulletPrefab, firepoint.transform.position, Quaternion.identity);
         Rigidbody2D spellrb = spell.GetComponent<Rigidbody2D>();
         spellrb.AddForce(Vector2.right * playermoveSpeed, ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "BlobShield")
+        {
+            playerHealth -= 2;
+            rb.AddForce(transform.up * repelForcce, ForceMode2D.Impulse);
+        }
     }
 }

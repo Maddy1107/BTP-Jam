@@ -10,14 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 5148353710161841112}
   - component: {fileID: 5148353710161841113}
-  - component: {fileID: 5148353710161841118}
+  - component: {fileID: 223922527}
+  - component: {fileID: 5363075570364874697}
   m_Layer: 11
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5148353710161841112
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5148353710161841119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02, y: -1.6, z: 0}
-  m_LocalScale: {x: 6.151935, y: 2.8392835, z: 1}
+  m_LocalScale: {x: 6.7020016, y: 4.8860564, z: 1.5697}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,20 +72,39 @@ SpriteRenderer:
   m_SortingLayerID: -2044694741
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1603291472181913768, guid: 49b3a1fccd7c54f4c8694ad2af07e932,
+  m_Sprite: {fileID: -7321320715025566293, guid: d1b03e448645e0448811fa5f880ba8b1,
     type: 3}
-  m_Color: {r: 1, g: 0.53390247, b: 0, a: 1}
+  m_Color: {r: 0.9528302, g: 0.5437227, b: 0.049439307, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.925, y: 2.6}
+  m_Size: {x: 2.56, y: 1.69}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5148353710161841118
-BoxCollider2D:
+--- !u!95 &223922527
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5148353710161841119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5d3f7af7ece12a4da5d3459b9e0a7f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &5363075570364874697
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -100,12 +120,25 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.925, y: 2.6}
-    newSize: {x: 2.925, y: 2.6}
+    oldSize: {x: 2.56, y: 1.69}
+    newSize: {x: 2.56, y: 1.69}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.925, y: 2.6}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.8784071, y: 0.74399656}
+      - {x: 0.8733487, y: 0.6657509}
+      - {x: 0.49454597, y: 0.66936404}
+      - {x: 0.4846518, y: 0.7432571}
+      - {x: 0.006458288, y: 0.7286905}
+      - {x: -0.08478672, y: 0.597604}
+      - {x: -0.7163555, y: 0.58245647}
+      - {x: -0.722061, y: 0.6656856}
+      - {x: -1.28, y: 0.685}
+      - {x: -1.28, y: -0.84499997}
+      - {x: 1.28, y: -0.84499997}
+      - {x: 1.2826982, y: 0.6627251}
+      - {x: 1.2050096, y: 0.67017144}
+      - {x: 1.2008682, y: 0.74726534}
