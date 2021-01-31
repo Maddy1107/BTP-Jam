@@ -19,7 +19,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     public Waves[] waves = new Waves[4];
     public Transform[] FlyingEnemyspawnpoints = new Transform[4];
     public Transform[] Canonspawnpoints = new Transform[4];
-    public Transform[] Blobspawnpoints = new Transform[3];
+    public Transform[] Blobspawnpoints = new Transform[2];
     public Transform[] Bossspawnpoints = new Transform[4];
 
     Waves _waves;

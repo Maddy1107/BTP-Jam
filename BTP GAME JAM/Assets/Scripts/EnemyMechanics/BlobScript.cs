@@ -50,7 +50,7 @@ public class BlobScript : MonoBehaviour
         {
             if (nextpositionChangetime < Time.time)
             {
-                Transform randomspawnPoint = enemySpawner.FlyingEnemyspawnpoints[Random.Range(0, enemySpawner.FlyingEnemyspawnpoints.Length)];
+                Transform randomspawnPoint = enemySpawner.Blobspawnpoints[Random.Range(0, enemySpawner.Blobspawnpoints.Length)];
                 transform.position = randomspawnPoint.position;
                 nextpositionChangetime = Time.time + 2;
             }
