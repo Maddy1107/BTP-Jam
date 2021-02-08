@@ -149,7 +149,7 @@ public class EnemyWaveSpawner : MonoBehaviour
         else if(ongoingWavenumber == 1)
         {
             Instantiate(_waves.enemy, Blobspawnpoints[index].transform.position, Quaternion.identity);
-            index += 1;
+            //index += 1;
         }
         else if(ongoingWavenumber == 2)
         {
